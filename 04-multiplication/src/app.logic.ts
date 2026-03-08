@@ -1,19 +1,22 @@
 import fs from 'node:fs';
+// @ts-ignore
+import { yarg } from './config/plugins/args.plugin.ts'
 
 let outputMessage = ''
-const base = 6;
+const { b: base, l: limit, s: showTable } = yarg;
 const output = 'outputs';
 const header = `
 ===========================
         Tabla del ${base}
 ===========================
 `
-for (let i = 1; i <= 10; i++) {
+
+for (let i = 1; i <= limit; i++) {
     outputMessage += `${base} x ${i} = ${base * i} \n`;
 }
 
 outputMessage = header + outputMessage;
 
-fs.mkdirSync(output, { recursive: true });
-fs.writeFileSync(`outputs/tabla-${base}.txt`, outputMessage);
-console.log(`Tabla del ${base} creada`);
+if (showTable) {
+    console.log(outputMessage);
+}
