@@ -13,7 +13,6 @@ export interface Options {
 export class SaveFile implements SaveFileUseCase {
     constructor(
         /*repository: StorageRepository*/
-
     ) { }
 
     execute({
@@ -27,7 +26,7 @@ export class SaveFile implements SaveFileUseCase {
             return true;
 
         } catch (error) {
-            console.error(error);
+            // console.error(error);
             return false;
         }
     }
