@@ -1,12 +1,13 @@
-import { Server } from "./presentation/server";
+import { Server } from './presentation/server';
 
 
-
-
-(async () => {
-    main();
+(async() => {
+  main();
 })();
 
-function main() {
-    Server.start();
+
+function main(){
+  Server.start();
 }
+
+
