@@ -3,3 +3,12 @@ dist/
 
 # Logs
 .DS_Store
+
+logs/
+
+# Config
+.env
+
+mongo/
+postgres/
+/src/generated/prisma
