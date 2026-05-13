@@ -25,7 +25,7 @@ export class Server {
 
   public static async start() {
 
-    console.log( 'Server started...' );
+    console.log('Server started...');
 
     //todo: Mandar email
     // new SendEmailLogs(
@@ -37,7 +37,7 @@ export class Server {
     // emailService.sendEmailWithFileSystemLogs(
     //   ['fernando.herrera85@gmail.com','fernando.herrera.cr@gmail.com']
     // );
-    
+
     // const logs = await logRepository.getLogs(LogSeverityLevel.low);
     // console.log(logs);
 
@@ -51,7 +51,7 @@ export class Server {
     //       () => console.log( `${ url } is ok` ),
     //       ( error ) => console.log( error ),
     //     ).execute( url );
-        
+
     //   }
     // );
 

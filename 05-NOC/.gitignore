@@ -1,14 +1,16 @@
-node_modules
+node_modules/
 dist/
 
 # Logs
 .DS_Store
 
+
 logs/
 
-# Config
+
 .env
 
-mongo/
-postgres/
-/src/generated/prisma
+/mongo
+/postgres
+/mongo-test
+/postgres-test
