@@ -8,7 +8,7 @@ dist/
 logs/
 
 
-.env
+.env*
 
 /mongo
 /postgres
