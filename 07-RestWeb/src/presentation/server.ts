@@ -28,11 +28,11 @@ export class Server {
         //* Middlewares
 
         // public foler
-        this.app.use(express.static('public'));
+        this.app.use(express.static(this.publicPath));
 
 
         this.app.use((req, res) => {
-            const indexPath = path.resolve(__dirname, '../../public/index.html');
+            const indexPath = path.resolve(__dirname, `../../${this.publicPath}/index.html`);
             res.sendFile(indexPath);
         });
 
