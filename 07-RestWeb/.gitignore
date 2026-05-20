@@ -3,3 +3,5 @@ keys/
 .env
 *.key
 *.crt
+postgres/
+/src/generated/prisma
