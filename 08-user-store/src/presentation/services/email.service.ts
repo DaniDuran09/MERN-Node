@@ -14,6 +14,7 @@ export interface Attachement {
 }
 
 
+
 export class EmailService {
 
     private transporter: Transporter
@@ -24,6 +25,7 @@ export class EmailService {
         mailerService: string,
         mailerEmail: string,
         sendEmailPassword: string,
+        private readonly postToProvider: boolean,
     ) {
 
         this.transporter
@@ -43,6 +45,8 @@ export class EmailService {
 
 
         try {
+
+            if (!this.postToProvider) return true;
 
             const sentInformation = await this.transporter.sendMail({
                 to: to,
