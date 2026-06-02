@@ -4,7 +4,7 @@ import { UserModel } from "../../data";
 import { UserEntity } from "../../domain";
 
 
-export class authMiddleware {
+export class AuthMiddleware {
 
     //DI
     constructor() { }
